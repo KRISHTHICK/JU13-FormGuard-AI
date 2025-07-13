@@ -62,3 +62,39 @@ Edit
   ],
   "Compliance Status": "⚠️ Partially Compliant"
 }
+
+# ✅ FormGuard AI – Smart Form Validator with Agent
+
+FormGuard AI validates business forms and documents using AI agents. It checks for required fields, format issues, and consistency, then provides natural language suggestions.
+
+---
+
+## 🚀 Features
+
+- ✅ Upload forms: PDF, DOCX, or TXT
+- 🔍 Validator Agent checks:
+  - Required field presence
+  - Correct formats (e.g., dates, currency)
+  - Consistency across fields
+- 🤖 AI Suggestions using LLM
+- 📑 JSON + human-readable validation output
+
+---
+
+## 🧪 Sample Output
+
+```json
+{
+  "missing": ["Employee ID"],
+  "format_issues": ["Trip Date format incorrect"],
+  "consistency": ["Mismatch: Total Amount ≠ Sum of Expenses"],
+  "passed": ["Name"]
+}
+
+**## How to run**
+git clone https://github.com/yourusername/formguard-ai.git
+cd formguard-ai
+pip install -r requirements.txt
+ollama pull llama3
+streamlit run app.py
+
